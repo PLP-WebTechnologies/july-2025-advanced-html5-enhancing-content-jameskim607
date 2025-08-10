@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>enhanced html form</title>
+</head>
+<body>
+  <header>
+    <h1>Event Signup</h1>
+    <p>A brief page demonstrating lists, tables, media, semantic structure, and a validated HTML5 form.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Club</h2>
+      <ul>
+        <li>Community seed bank</li>
+        <li>Monthly workshops</li>
+        <li>Volunteer garden days</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Upcoming Events</h2>
+      <table border="1">
+        <caption>Next three meetings</caption>
+        <tr><th>Date</th><th>Topic</th><th>Location</th></tr>
+        <tr><td>2025-09-06</td><td>Seed Saving Basics</td><td>Community Hall</td></tr>
+        <tr><td>2025-10-04</td><td>Composting Workshop</td><td>Riverside</td></tr>
+        <tr><td>2025-11-01</td><td>Raised Beds</td><td>Greenhouse</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media</h2>
+      <img src="placeholder.jpg" alt="A community garden" width="220" height="140">
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section>
+      <h2>Membership & Event Signup</h2>
+      <form>
+        <fieldset>
+          <legend>Personal details</legend>
+          <label>Full name: <input type="text" name="fullname" required></label><br>
+          <br>
+          <label>Email: <input type="email" name="email" required></label><br>
+          <br>
+          <label>Member ID: <input type="text" value="" readonly></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label>Areas of interest:
+            <select name="interest" required>
+              <option value="">— select —</option>
+              <option>Vegetable growing</option>
+              <option>Seed saving</option>
+              <option>Pollinators</option>
+            </select>
+            <br>
+          </label>
+          <label><input type="checkbox" checked> newsletter</label><br>
+          <label><input type="radio" name="role" value="none" checked> None</label><br>
+          <label><input type="radio" name="role" value="coordinator"> Coordinator</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Event booking</legend>
+          <label>Event date: <input type="date" name="event-date" required></label><br>
+          <br>
+          <label>Number of guests: <input type="number" min="0" max="5" value="0"></label><br>
+          <br>
+          <label>Arrival time: <input type="time"></label><br>
+          <br>
+          <label>Dietary notes: <textarea maxlength="140"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Security & links</legend>
+          <label>Password: <input type="password" minlength="8" required></label><br>
+          <br>
+          <label>Website: <input type="url" placeholder="https://"></label><br>
+          <br>
+          <label>Upload CV: <input type="file" accept="application/pdf"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quick lookup</legend>
+          <label>Favourite plant: <input list="plants"></label>
+          <datalist id="plants">
+            <option value="Tomato">
+            <option value="Basil">
+            <option value="Sweet potato">
+          </datalist><br>
+          <br>
+          <label>Confidence: <input type="range" min="0" max="10" value="5"></label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>File: enhanced-form.html</p>
+  </footer>
+</body>
+</html>
